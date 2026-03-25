@@ -4,6 +4,11 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 
+gulp.task('html', function () {
+    return gulp.src('src/index.html')
+        .pipe(gulp.dest('dist'));
+});
+
 function styles() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sourcemaps.init())
