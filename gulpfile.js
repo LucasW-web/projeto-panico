@@ -5,9 +5,11 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('html', function () {
-    return gulp.src('src/index.html')
+    return gulp.src('index.html')
         .pipe(gulp.dest('dist'));
 });
+
+gulp.task('default', gulp.parallel('html',styles,scripts));
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
@@ -35,4 +37,4 @@ function watch() {
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
-exports.default = gulp.parallel(styles, scripts);
+exports.default = gulp.parallel(styles, scripts,);
