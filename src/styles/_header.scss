@@ -1,0 +1,115 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+    transition: all 0.3s ease;
+    
+    &.scrolled {
+        padding: 0.7rem 0;
+        background: rgba(10, 10, 15, 0.95);
+        border-bottom-color: rgba(155, 89, 182, 0.4);
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__logo {
+        img {
+            margin-bottom: 100% ;
+            width: 100%;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    &__nav {
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            
+            li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s;
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: linear-gradient(90deg, #9b59b6, #e74c3c);
+                    transition: width 0.3s;
+                }
+                
+                &:hover {
+                    color: #9b59b6;
+                    
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        transition: color 0.3s;
+        
+        &:hover {
+            color: #9b59b6;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        &__nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 5rem 2rem;
+            transition: right 0.4s ease;
+            border-left: 1px solid rgba(155, 89, 182, 0.3);
+            
+            &.active {
+                right: 0;
+            }
+            
+            ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                
+                li a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        
+        &__menu-toggle {
+            display: block;
+            z-index: 1001;
+        }
+    }
+}
