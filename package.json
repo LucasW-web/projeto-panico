@@ -1,29 +1,21 @@
 {
-  "name": "clone_disneyplus",
+  "name": "projeto panico",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Landing page do panico",
   "scripts": {
-    "dev": "gulp watch",
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp watch",
+    "start": "gulp watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LucasW-web/clone_disneyplus.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LucasW-web/clone_disneyplus/issues"
-  },
-  "homepage": "https://github.com/LucasW-web/clone_disneyplus#readme",
-  "description": "",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-dart-sass": "^1.1.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^6.0.1",
-    "sass": "^1.88.0"
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "sass": "^1.69.0"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
+
