@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
@@ -31,7 +30,7 @@ function watch() {
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
-=======
+
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
@@ -64,5 +63,4 @@ function watch() {
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
->>>>>>> 254f9de2504ed879012731ef65f5bf09fb780215
 exports.default = gulp.parallel(styles, scripts);
