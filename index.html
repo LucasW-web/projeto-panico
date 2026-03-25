@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -466,4 +467,474 @@
             </div>
         </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* LISTRAS NO FUNDO (continua igual) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                0deg,
+                transparent,
+                transparent 2px,
+                #000000 2px,
+                #000000 4px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .topo {
+            background: rgb(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 18px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .topo-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topo img {
+            height: 70px;
+            width: auto;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            min-height: 350px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('src/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: brightness(0.45);
+        }
+        
+        .hero-overlay {
+            position:fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, 
+                rgba(0,0,0,0.85) 0%,
+                rgba(0,0,0,0.5) 50%,
+                rgba(0,0,0,0.85) 100%);
+            
+        }
+
+        .hero-content {
+            font-family: Creepster,cursive;
+            font-size: 5.2rem;
+            position:relative;
+            z-index: 3;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Creepster', cursive;
+            font-size: 5.2rem;
+            margin-bottom:20px;
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.9);
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 span {
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: #ffffff;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 50px;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-size: 2rem;
+        }
+
+        .btn-primary {
+            background: #000000;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: rgb(59, 59, 58);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #000000;
+            border: 2px solid #000000;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(59, 59, 58);
+            transform: translateY(-2px);
+        }
+
+        .classico {
+            padding: 100px 30px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .classico-container {
+            margin-bottom: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .classico-texto {
+            flex: 1;
+            background: rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 3px solid #ffffff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .classico-texto h2 {
+            font-family: 'Creepster', cursive;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .classico-texto p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #f0f0f0;
+            font-size: 1rem;
+        }
+
+        .info {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            background: #000000;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border-left: 2px solid rgb(59, 59, 58);
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .sobre-imagem {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sobre-imagem img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* SEÇÃO PERSONAGENS - SÓ MUDEI A COR DO FUNDO PARA PRETO LISO */
+        .atores {
+            padding: 100px 30px;
+            background: #000000;
+            position: relative;
+            z-index: 2;
+        }
+
+        .atores h2 {
+            text-align: center;
+            font-family: 'Creepster', cursive;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .atores > p {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            max-width: 600px;
+            margin: 100px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 10px solid #ffffff;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #ffffff;
+        }
+
+        .card-img {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            padding: 20px 20px 10px;
+            color: #ffffff;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            padding: 0 20px 25px;
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .rodape {
+            background: #000000;
+            padding: 70px 30px 30px;
+            text-align: center;
+            border-top: 1px solid #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .rodape img {
+            height: 80px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        .rodape p {
+            color: #ffffff;
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        .social {
+            margin: 30px 0;
+        }
+
+        .social a {
+            color: #ffffff;
+            font-size: 28px;
+            margin: 0 15px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .social a:hover {
+            color: #ffffff;
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            color: #5a5a5a;
+            font-size: 12px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .topo-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .topo img {
+                height: 55px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .sobre-container {
+                flex-direction: column;
+            }
+            
+            .menu a {
+                margin: 0 12px;
+                font-size: 14px;
+            }
+            
+            .rodape img {
+                height: 65px;
+            }
+        }
+    </style>
+    <style type="text/css" id="operaUserStyle"></style>
+    </head>
+<body>
+    <div class="topo">
+        <div class="topo-content">
+            <div class = menu>
+                <a href="SCREAM"></a>
+            </div>
+            <h1>
+                <img class="header__logo" src="https://cdn10.bigcommerce.com/s-yhxhf/products/40616/images/193716/PO288_Ghostface_12x18_mock__60967.1746568353.1080.1080.jpg?c=2" alt="Disney+">
+                </div>
+            </div>
+        </div>
+        <div id="home" class="hero"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>
+                    SCREAM
+                    <br>
+                    <span>AONDE VOCÊ MENOS ESPERA ELE ESTA!</span>
+                </h1>
+                <p>O RETORNO DE GHOSTFACE</p>
+                <a href="#" class="btn btn-primary">ASSISTA JÁ</a>
+                <a href="#" class="btn btn-secondary">TRAILER</a>
+            </div>
+        </div>
+        <div id="classico" class="classico">
+            <div class="classico-container">
+                <div class="classico-texto">
+                    <h2>UM CLASSICO DO TERROR</h2>
+                    <p>Pânico (1996), dirigido por Wes Craven, revitalizou o gênero slasher nos anos 90 ao misturar suspense com metalinguagem, onde os personagens conhecem clichês de terror. Com a icônica máscara Ghostface, o filme satiriza o gênero, traz cenas memoráveis como a de abertura com Drew Barrymore e foca na sobrevivente Sidney Prescott. 
+                    </p>
+                    <div class="info">
+                        <div class="info-item">7 filmes</div> 
+                        <div class="info-item">+18</div>
+                    </div>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="./src/images/scream (1).jpg" alt="ghostface">
+                </div>
+            </div>
+            <div id="atores" class="atores">
+                <h2>ATORES</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://s2-monet.glbimg.com/UPXp3g5KmcYgoyWA8716RG25ugk=/0x0:710x400/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e7c91519bbbb4fadb4e509085746275d/internal_photos/bs/2023/H/P/OHHHyFQu6EAaUTzAXMSA/drew-barrymore-scream-feat.webp" alt="Drew Barrymore">
+                        </div>
+                        <h3>Drew Barrymore</h3>
+                        <p>Drew Barrymore nasceu o 22 de fevereiro de 1975 em Culver City, Califórnia, EUA. É autora e produtora, conhecida pelo seu trabalho em As Panteras (2000), Como Se Fosse a Primeira Vez (2004) e Nunca Fui Beijada (1999). Foi casada com Will Kopelman, Tom Green e Jeremy Thomas.</p>
+                        <div class="card-img">
+                            <img src="https://cinemaweb.com.br/wp-content/uploads/2024/09/pessoa-roger-l-jackson.jpg" alt="Roger Jackson">
+                        </div>
+                        <h3>Roger Jackson</h3>
+                        <p>Roger Jackson nasceu o 13 de julho de 1958 em Atlanta, Geórgia, EUA. É ator, conhecido pelo seu trabalho em Pânico (1996), Pânico 4 (2011) e Pânico 3 (2000).</p>
+                        <div class="card-img">
+                            <img src="https://thegauntlet.ca/wp-content/uploads/2024/04/image000000.jpeg" alt="Lee Waddell">
+                        </div>
+                        <h3>Lee Waddell</h3>
+                        <p>Lee Waddell é conhecido pelo seu trabalho em X-Men: Primeira Classe (2011), O Suspeito da Rua Arlington (1999) e Blade: O Caçador de Vampiros (1998).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rodape">
+                    <img src="https://img.freepik.com/vetores-premium/panico-de-grafite-pintado-com-spray-palavra-pulverizado-isolado-com-um-panico-de-fonte-de-grafite-de-fundo-branco-com-excesso-de-spray-em-preto-sobre-branco-ilustracao-vetorial_731105-175.jpg" alt="Panic">
+                    <p>💀​ A MORTE LHE AGUARDA 💀​</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="copyright"></div>
+                    <p>© Panico. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+</body>
+>>>>>>> 254f9de2504ed879012731ef65f5bf09fb780215
 </html>
