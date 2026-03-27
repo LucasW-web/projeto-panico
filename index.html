@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             font-family: 'Poppins', sans-serif;
             background: #0a0a0f;
             color: white;
@@ -129,7 +129,7 @@
         }
 
         .hero h1 span {
-            color: #ffffff;
+            color:#ffffff;
         }
 
         .hero p {
@@ -361,19 +361,38 @@
         }
 
         @media (max-width: 768px) {
-            .topo-content {
+            .topo-content{
                 flex-direction: column;
                 gap: 12px;
+                }
+
+                .card{
+                    flex-direction: column;
+                    align-items: center;
+                    display: grid;
+                    margin-right: 50px;
+
+                }
+                .atores{
+                    margin-left: 10px;
+                    margin-top: 20px;
+                }
             }
-            
+
             .topo img {
                 height: 55px;
+                
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
+            .hero-content h1{
+                font-size:5.5rem;
+                
+            }
+
             .sobre-container {
                 flex-direction: column;
             }
@@ -382,11 +401,15 @@
                 margin: 0 12px;
                 font-size: 14px;
             }
+
+            .rodape{
+                margin-left: 10px;
+            }
             
             .rodape img {
                 height: 65px;
+                
             }
-        }
     </style>
     <style type="text/css" id="operaUserStyle"></style>
     </head>
@@ -406,7 +429,7 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>
-                    SCREAM
+                    <h2>SCREAM</h2>
                     <br>
                     <span>AONDE VOCÊ MENOS ESPERA ELE ESTA!</span>
                 </h1>
@@ -601,6 +624,10 @@
             color: #ffffff;
         }
 
+        .hero-content h2{
+            color: red;
+        }
+
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 35px;
@@ -808,6 +835,7 @@
 
         .social {
             margin: 30px 0;
+            
         }
 
         .social a {
@@ -842,6 +870,10 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
+            
+                .hero-content h2{
+                    color: red;
+                }
             
             .sobre-container {
                 flex-direction: column;
